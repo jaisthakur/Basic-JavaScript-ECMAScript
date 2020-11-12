@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Basics</title>
+    <style>
+        #box {
+          display: flex;
+          justify-content: space-around;
+        }
+        #box > div {
+          height: 5em;
+          width: 5em;
+          background-color: purple;
+        }
+    </style>
+  </head>
+  <body>
+    <h3>Understand the ways to declare variables and Block Scopes</h3>
+    <h1>Let, Var and Const variables</h1>
+
+    <div id="box"></div>
+
+    <script type="text/javascript">
+      var topic = "JavaScript";
+      if (topic) {
+        // var topic = "ECMAScript"; // visible outside also
+        let topic = "ECMAScript"; // visible inside only
+        console.log("block", topic)
+      }
+      console.log("global", topic);
+
+
+      // Result of Var and Let in For code block
+
+      var div;
+      var box = document.getElementById("box");
+
+      // for (var i = 0; i < 5; i++) { //if use var then value of i will display a wrong result
+      for (let i = 0; i < 5; i++) {
+        div = document.createElement("div");
+        div.onclick = function () {
+          alert("This is box # " + i);
+        };
+        box.appendChild(div);
+      }
+
+      // Const
+
+      const pizza = true;
+      //pizza = false; // if re assign the value in constant variable it will give an TypeError
+
+      console.log(pizza);
+
+
+    </script>
+  </body>
+</html>
