@@ -3,29 +3,29 @@ class Vehicle {
       this.description = description;
       this.wheels = wheels;
     }
-    describeYourself() {
+    describeAboutVehicle() {
       console.log(
-        `I am a ${this.description} 
+        `This is a ${this.description} 
           with ${this.wheels} wheels.`
       );
     }
   }
   
-  let coolSkiVan = new Vehicle("cool ski van", 4);
+  let marutiWagonr = new Vehicle("Maruti WagonR", 4);
   
-  console.log(coolSkiVan);
-  coolSkiVan.describeYourself();
+  console.log(marutiWagonr);
+  marutiWagonr.describeAboutVehicle();
   
 
 // Inheritance
 
-  class SemiTruck extends Vehicle {
+  class Truck extends Vehicle {
     constructor() {
-      super("semi truck", 18);
+      super("Tata truck", 18);
     }
   }
-  let groceryStoreSemi = new SemiTruck();
-  groceryStoreSemi.describeYourself();
+  let tataTruck = new Truck();
+  tataTruck.describeAboutVehicle();
   
 
   // How Getters and Setters work with objects
@@ -63,8 +63,8 @@ class Vehicle {
     }
   }
   
-  const mtTallac = new Hike(10, 2);
+  const myOffice = new Hike(45, 30);
   
-  console.log(mtTallac.lengthInHours);
+  console.log(myOffice.lengthInHours);
   
 
